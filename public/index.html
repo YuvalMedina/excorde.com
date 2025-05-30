@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ex Corde | A Dialogue Between Eras</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/sidebar.css">
+</head>
+<body>
+  <!-- Hamburger icon -->
+  <div id="hamburger" class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <!-- Sidebar menu -->
+  <div id="sidebar-overlay" class="sidebar-overlay"></div>
+  <nav id="sidebar" class="sidebar">
+      <ul class="sidebar-primary">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#featured-works">Music</a></li>
+        <li><a href="#newsletter">Subscribe</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+      <hr class="sidebar-divider" />
+      <ul class="sidebar-secondary">
+          <li><a href="/store/index.html">Scores</a></li>
+          <li><a href="/works/index.html">Repertoire</a></li>
+          <li><a href="/videos.html">Videos</a></li>
+          <li><a href="/streaming.html">Streaming</a></li>
+          <li><a href="/about.html">Full Bio</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+      </ul>
+  </nav>
+  <div id="sidebar-backdrop"></div>
+
+  <header class="hero fade-in delay-1">
+    <video autoplay muted loop playsinline poster="/images/hero_placeholder.jpg">
+      <source src="/videos/yuval_medina_together_again_el_cerrito_excerpt.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-overlay">
+      <h1>Ex Corde</h1>
+      <p>A dialogue between eras — curated concerts uniting musical history with the voices of today.</p>
+    </div>
+  </header>
+
+  <section class="about fade-in delay-2">
+    <h2>About</h2>
+    <p>
+      Ex Corde is a composer-led ensemble dedicated to curating concerts that speak across centuries. From Bach, Britten, and Mahler to emerging composers from New York City and beyond, our programs invite dialogue between the timeless and the newly imagined. Founded by composers Marco Catella, Joshua DeLozier, and Yuval Medina, we bring our own music into conversation with the masterworks that shaped us — crafting narratives where the past doesn’t just echo, it listens and responds.
+    </p>
+  </section>
+
+  <section class="concerts fade-in delay-3">
+    <h2>Upcoming Concerts</h2>
+    <a href="/performance/10-10-2025">
+      <div class="concert-card">
+        <h3>Inaugural Concert</h3>
+        <div class="date">October 10, 2025</div>
+        <div class="location">St. Paul's Chapel, New York City</div>
+        <div class="program">Works by Bach, Mahler, Catella, DeLozier, and Medina</div>
+      </div>
+    </a>
+    <a href="/performance/12-14-2025">
+      <div class="concert-card">
+        <h3>Voices Across Time</h3>
+        <div class="date">December 14, 2025</div>
+        <div class="location">The DiMenna Center for Classical Music</div>
+        <div class="program">Featuring Britten's Serenade alongside new works by NYC composers</div>
+      </div>
+    </a>
+  </section>
+
+  <section class="composer-section fade-in delay-4">
+    <h2>Composer Bios</h2>
+    <a href="/composer/marco-catella">
+      <div class="composer-bio">
+        <img src="/images/marco_catella.jpg" alt="Marco Catella" class="composer-photo">
+        <div class="composer-details">
+          <h3>Marco Catella</h3>
+          <p>Marco Catella is a composer and sound artist whose work explores perception, memory, and the intersections between music, language, and space. His music has been performed across the United States and Europe, and he holds degrees in composition from Columbia University and the Manhattan School of Music.</p>
+        </div>
+      </div>
+    </a>
+    <a href="/composer/joshua-delozier">
+      <div class="composer-bio">
+        <img src="/images/joshua_delozier.jpg" alt="Joshua DeLozier" class="composer-photo">
+        <div class="composer-details">
+          <h3>Joshua DeLozier</h3>
+          <p>Joshua DeLozier is a composer and interdisciplinary artist whose work spans contemporary classical music, electronics, and performance art. With a focus on texture, gesture, and storytelling, his pieces often explore identity, embodiment, and ritual. He is currently based in New York City.</p>
+        </div>
+      </div>
+    </a>
+    <a href="/composer/yuval-medina">
+      <div class="composer-bio">
+        <img src="/images/yuval_medina.jpg" alt="Yuval Medina" class="composer-photo">
+        <div class="composer-details">
+          <h3>Yuval Medina</h3>
+          <p>Yuval Medina is a composer and pianist who creates emotionally charged works that fuse tradition with personal expression. A believer in music’s power to heal and connect, Yuval’s works often bring together different disciplines and cultural narratives. He is currently pursuing his master's in composition at the Manhattan School of Music.</p>
+        </div>
+      </div>
+    </a>
+  </section>
+
+  <section class="fade-in delay-5">
+    <h2>Media</h2>
+    <div class="media-gallery">
+      <div class="media-item">
+        <iframe src="https://www.youtube.com/embed/INSERT_VIDEO_ID" title="Together Again Excerpt" allowfullscreen></iframe>
+      </div>
+      <div class="media-item">
+        <iframe src="https://www.youtube.com/embed/INSERT_VIDEO_ID_2" title="Concert Highlight Clip" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="newsletter-section fade-in">
+    <div class="newsletter-container">
+      <h2>Stay Connected</h2>
+      <p class="newsletter-intro">
+        Be the first to hear new music, upcoming performances, and behind-the-scenes moments.
+      </p>
+
+      <form
+        action="https://buttondown.email/api/emails/embed-subscribe/excorde"
+        method="post"
+        target="popupwindow"
+        onsubmit="window.open('https://buttondown.email/excorde', 'popupwindow')"
+        class="embeddable-buttondown-form"
+      >
+        <div class="form-row">
+          <input type="text" name="metadata__first_name" id="bd-first-name" required placeholder="First name" />
+          <input type="text" name="metadata__last_name" id="bd-last-name" placeholder="Last name (optional)" />
+        </div>
+        <div class="form-row email-submit-row">
+          <div class="input-wrapper">
+            <input type="email" name="email" id="bd-email" required placeholder="Your email address" />
+          </div>
+          <input type="submit" value="Subscribe" />
+        </div>
+        <p id="newsletter-response" class="newsletter-response"></p>
+      </form>
+
+      <p class="newsletter-powered">
+        <a href="https://buttondown.email/refer/excorde" target="_blank">Powered by Buttondown.</a>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Ex Corde. All rights reserved.</p>
+    <p>
+      <a href="https://marcocatella.com" target="_blank">Marco Catella</a> |
+      <a href="https://joshuadeloizier.com" target="_blank">Joshua DeLoizier</a> |
+      <a href="https://yuvalmedina.com" target="_blank">Yuval Medina</a>
+    </p>
+    <p>
+      <a href="mailto:contact@excorde.nyc">contact@excorde.nyc</a>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/excorde.nyc" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </p>
+  </footer>
+
+  <script src="/js/sidebar.js"></script><script>
+      document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+  
+        const name = document.getElementById('contact-name').value;
+        const email = document.getElementById('contact-email').value;
+        const subject = document.getElementById('contact-subject').value;
+        const message = document.getElementById('contact-message').value;
+  
+        const mailtoLink = `mailto:contact@yuvalmedina.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From:\t<Name: ${name}\n\t\t Email: ${email}>\n\n${message}`)}`;
+  
+        window.location.href = mailtoLink;
+      });
+    </script>
+</body>
+</html>
