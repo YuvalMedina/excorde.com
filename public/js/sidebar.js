@@ -37,3 +37,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     backdrop.addEventListener("click", closeSidebar);
 });
+
+function toggleSubmenu(event) {
+    event.preventDefault();
+    const parent = event.target.closest('li');
+    parent.classList.toggle('expanded');
+}

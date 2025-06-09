@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yuval Medina | Ex Corde</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/composer-page.css" />
+  <link rel="stylesheet" href="/css/sidebar.css" />
+</head>
+<body>
+  <!-- Hamburger icon -->
+  <div id="hamburger" class="hamburger light">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <!-- Sidebar menu -->
+  <div id="sidebar-overlay" class="sidebar-overlay"></div>
+  <nav id="sidebar" class="sidebar">
+    <ul class="sidebar-primary">
+      <li><a href="/">Home</a></li>
+      <li><a href="/performances/index.html">Performances</a></li>
+      <li><a href="/media.html">Media</a></li>
+      <li class="has-submenu">
+        <a href="#" onclick="toggleSubmenu(event)">Composers ▾</a>
+        <ul class="submenu">
+          <li><a href="/composers/marco-catella.html">Marco Catella</a></li>
+          <li><a href="/composers/joshua-delozier.html">Joshua DeLozier</a></li>
+          <li><a href="/composers/yuval-medina.html">Yuval Medina</a></li>
+        </ul>
+      </li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+    <hr class="sidebar-divider" />
+    <ul class="sidebar-secondary">
+      <li><a href="/donate.html">Donate</a></li>
+    </ul>
+  </nav>
+  <div id="sidebar-backdrop"></div>
+
+  <div class="profile-container fade-in delay-1">
+    <div class="composer-top">
+      <h1 class="composer-name">Yuval Medina</h1>
+      <div class="composer-image">
+        <img src="/images/yuval_medina.jpg" alt="Yuval Medina headshot">
+      </div>
+    </div>
+    <div class="composer-bio">
+      <p>
+        Yuval Medina is a composer and pianist who believes in the power of music to change our world.
+        A storyteller at heart, his music seeks to express all that cannot be said in words.
+        He is currently pursuing his master’s in classical composition at the Manhattan School of Music.
+      </p>
+
+      <p>
+        His music was recently <a href="https://www.instagram.com/reel/DGvL_NBKN-J/" target="_blank">featured</a> by <em>Vanity Fair</em> during the Oscars ceremony,
+        accompanying stars including Adrien Brody, Olivia Wilde, and Andrew Garfield.
+        Yuval received the Tribeca New Music Merit Award for his piano cadenza
+        <a href="works/focusing-on-other-things.html" target="_blank"><em>Focusing on Other Things</em></a>, and was recently awarded an Honorable Mention
+        from the New York Youth Symphony’s First Music competition.
+      </p>
+
+      <p>
+        You can follow <strong>@yuvalcomposer</strong> on
+        <a href="https://instagram.com/yuvalcomposer" target="_blank">Instagram</a>,
+        <a href="https://youtube.com/@yuvalcomposer" target="_blank">YouTube</a>, or
+        <a href="https://soundcloud.com/yuvalcomposer" target="_blank">SoundCloud</a>
+        to stay up to date with his latest work.
+      </p>
+    </div>
+    <div class="composer-media">
+      <h2>Featured Work</h2>
+      <div class="video-embed">
+        <iframe src="https://www.youtube.com/embed/T-qgC0ttAUY" title="Yuval Medina Work" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Ex Corde. All rights reserved.</p>
+    <p>
+      <a href="https://marcocatella.com" target="_blank">Marco Catella</a> |
+      <a href="https://joshuadelozier.com" target="_blank">Joshua DeLozier</a> |
+      <a href="https://yuvalmedina.com" target="_blank">Yuval Medina</a>
+    </p>
+    <p>
+      <a href="mailto:contact@excorde.nyc">contact@excorde.nyc</a>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/excorde.nyc" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </p>
+  </footer>
+
+  <script src="/js/sidebar.js"></script>
+</body>
+</html>

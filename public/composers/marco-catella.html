@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marco Catella | Ex Corde</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/composer-page.css" />
+  <link rel="stylesheet" href="/css/sidebar.css" />
+</head>
+<body>
+  <!-- Hamburger icon -->
+  <div id="hamburger" class="hamburger light">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <!-- Sidebar menu -->
+  <div id="sidebar-overlay" class="sidebar-overlay"></div>
+  <nav id="sidebar" class="sidebar">
+    <ul class="sidebar-primary">
+      <li><a href="/">Home</a></li>
+      <li><a href="/performances/index.html">Performances</a></li>
+      <li><a href="/media.html">Media</a></li>
+      <li class="has-submenu">
+        <a href="#" onclick="toggleSubmenu(event)">Composers ▾</a>
+        <ul class="submenu">
+          <li><a href="/composers/marco-catella.html">Marco Catella</a></li>
+          <li><a href="/composers/joshua-delozier.html">Joshua DeLozier</a></li>
+          <li><a href="/composers/yuval-medina.html">Yuval Medina</a></li>
+        </ul>
+      </li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+    <hr class="sidebar-divider" />
+    <ul class="sidebar-secondary">
+      <li><a href="/donate.html">Donate</a></li>
+    </ul>
+  </nav>
+  <div id="sidebar-backdrop"></div>
+
+  <div class="profile-container fade-in delay-1">
+    <div class="composer-top">
+      <h1 class="composer-name">Marco Catella</h1>
+      <div class="composer-image">
+        <img src="/images/marco_catella.jpg" alt="Marco Catella headshot">
+      </div>
+    </div>
+    <div class="composer-bio">
+      <p>Marco Catella is a composer from Buenos Aires, Argentina. He began 
+        studying composition and theory at 17 with Javier Velardez and, for the past twoand-a-half years, has had the privilege of studying with Dr. J. Mark Stambaugh. 
+        With his music, he seeks to evoke universal human emotions, and drama in 
+        the broadest sense, employing a style that is deeply rooted in our great musical 
+        tradition, while having a place in our contemporary world. During his time at 
+        MSM, he has composed chamber music, opera scenes, and other vocal works, 
+        including a two-act chamber opera.</p>
+    </div>
+    <div class="composer-media">
+      <h2>Featured Work</h2>
+      <div class="video-embed">
+        <iframe src="https://www.youtube.com/embed/yEjIbHmTmGQ" title="Marco Catella Work" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Ex Corde. All rights reserved.</p>
+    <p>
+      <a href="https://marcocatella.com" target="_blank">Marco Catella</a> |
+      <a href="https://joshuadelozier.com" target="_blank">Joshua DeLozier</a> |
+      <a href="https://yuvalmedina.com" target="_blank">Yuval Medina</a>
+    </p>
+    <p>
+      <a href="mailto:contact@excorde.nyc">contact@excorde.nyc</a>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/excorde.nyc" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </p>
+  </footer>
+
+  <script src="/js/sidebar.js"></script>
+</body>
+</html>

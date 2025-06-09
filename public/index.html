@@ -19,21 +19,25 @@
   <!-- Sidebar menu -->
   <div id="sidebar-overlay" class="sidebar-overlay"></div>
   <nav id="sidebar" class="sidebar">
-      <ul class="sidebar-primary">
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#featured-works">Music</a></li>
-        <li><a href="#newsletter">Subscribe</a></li>
-        <li><a href="#about">About</a></li>
-      </ul>
-      <hr class="sidebar-divider" />
-      <ul class="sidebar-secondary">
-          <li><a href="/store/index.html">Scores</a></li>
-          <li><a href="/works/index.html">Repertoire</a></li>
-          <li><a href="/videos.html">Videos</a></li>
-          <li><a href="/streaming.html">Streaming</a></li>
-          <li><a href="/about.html">Full Bio</a></li>
-          <li><a href="/contact.html">Contact</a></li>
-      </ul>
+    <ul class="sidebar-primary">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="/performances/index.html">Performances</a></li>
+      <li><a href="/media.html">Media</a></li>
+      <li class="has-submenu">
+        <a href="#" onclick="toggleSubmenu(event)">Composers ▾</a>
+        <ul class="submenu">
+          <li><a href="/composers/marco-catella.html">Marco Catella</a></li>
+          <li><a href="/composers/joshua-delozier.html">Joshua DeLozier</a></li>
+          <li><a href="/composers/yuval-medina.html">Yuval Medina</a></li>
+        </ul>
+      </li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+    <hr class="sidebar-divider" />
+    <ul class="sidebar-secondary">
+      <li><a href="/donate.html">Donate</a></li>
+    </ul>
   </nav>
   <div id="sidebar-backdrop"></div>
 
@@ -47,59 +51,46 @@
     </div>
   </header>
 
-  <section class="about fade-in delay-2">
-    <h2>About</h2>
-    <p>
-      Ex Corde is a composer-led ensemble dedicated to curating concerts that speak across centuries. From Bach, Britten, and Mahler to emerging composers from New York City and beyond, our programs invite dialogue between the timeless and the newly imagined. Founded by composers Marco Catella, Joshua DeLozier, and Yuval Medina, we bring our own music into conversation with the masterworks that shaped us — crafting narratives where the past doesn’t just echo, it listens and responds.
-    </p>
-  </section>
+  <a href="/about.html" class="about-link">
+    <section class="about-section fade-in delay-2">
+      <h2>About</h2>
+      <p>
+        Ex Corde is a nonprofit, composer-led ensemble dedicated to curating concerts that speak across centuries. From Bach, Britten, and Mahler to emerging composers from New York City and beyond, our programs invite dialogue between the timeless and the newly imagined. Founded by composers Marco Catella, Joshua DeLozier, and Yuval Medina, we bring our own music into conversation with the masterworks that shaped us — crafting narratives where the past doesn’t just echo, it listens and responds.
+      </p>
+    </section>
+  </a>
 
   <section class="concerts fade-in delay-3">
     <h2>Upcoming Concerts</h2>
-    <a href="/performance/10-10-2025">
-      <div class="concert-card">
-        <h3>Inaugural Concert</h3>
-        <div class="date">October 10, 2025</div>
-        <div class="location">St. Paul's Chapel, New York City</div>
-        <div class="program">Works by Bach, Mahler, Catella, DeLozier, and Medina</div>
-      </div>
-    </a>
-    <a href="/performance/12-14-2025">
-      <div class="concert-card">
-        <h3>Voices Across Time</h3>
-        <div class="date">December 14, 2025</div>
-        <div class="location">The DiMenna Center for Classical Music</div>
-        <div class="program">Featuring Britten's Serenade alongside new works by NYC composers</div>
-      </div>
-    </a>
+    <p class="placeholder" id="upcoming-placeholder">More performances coming soon.</p>
   </section>
 
   <section class="composer-section fade-in delay-4">
     <h2>Composer Bios</h2>
-    <a href="/composer/marco-catella">
+    <a href="/composers/marco-catella.html">
       <div class="composer-bio">
         <img src="/images/marco_catella.jpg" alt="Marco Catella" class="composer-photo">
         <div class="composer-details">
           <h3>Marco Catella</h3>
-          <p>Marco Catella is a composer and sound artist whose work explores perception, memory, and the intersections between music, language, and space. His music has been performed across the United States and Europe, and he holds degrees in composition from Columbia University and the Manhattan School of Music.</p>
+          <p>Marco Catella's music seeks to evoke universal human emotions, and drama in the broadest sense, employing a style that is deeply rooted in our great musical tradition, while having a place in our contemporary world. He hails from Buenos Aires, Argentina&#8230;</p>
         </div>
       </div>
     </a>
-    <a href="/composer/joshua-delozier">
+    <a href="/composers/joshua-delozier.html">
       <div class="composer-bio">
         <img src="/images/joshua_delozier.jpg" alt="Joshua DeLozier" class="composer-photo">
         <div class="composer-details">
           <h3>Joshua DeLozier</h3>
-          <p>Joshua DeLozier is a composer and interdisciplinary artist whose work spans contemporary classical music, electronics, and performance art. With a focus on texture, gesture, and storytelling, his pieces often explore identity, embodiment, and ritual. He is currently based in New York City.</p>
+          <p>The music of Joshua C. DeLozier (b. 1998) seeks an integration of form and content to create richly varied interrelationships between ideas at different scales of time. DeLozier’s works have been heard at the Lake George Music Festival, at June in Buffalo, and on WGTE Public Media’s radio program “Morning Classics”&#8230;</p>
         </div>
       </div>
     </a>
-    <a href="/composer/yuval-medina">
+    <a href="/composers/yuval-medina.html">
       <div class="composer-bio">
         <img src="/images/yuval_medina.jpg" alt="Yuval Medina" class="composer-photo">
         <div class="composer-details">
           <h3>Yuval Medina</h3>
-          <p>Yuval Medina is a composer and pianist who creates emotionally charged works that fuse tradition with personal expression. A believer in music’s power to heal and connect, Yuval’s works often bring together different disciplines and cultural narratives. He is currently pursuing his master's in composition at the Manhattan School of Music.</p>
+          <p>Yuval Medina is a composer and pianist who believes in the power of music to change our world. A storyteller at heart, his music seeks to express all that cannot be said in words. He is currently pursuing his master’s in classical composition at the Manhattan School of Music. His music was recently featured by Vanity Fair during the Oscars ceremony&#8230;</p>
         </div>
       </div>
     </a>
@@ -109,10 +100,10 @@
     <h2>Media</h2>
     <div class="media-gallery">
       <div class="media-item">
-        <iframe src="https://www.youtube.com/embed/INSERT_VIDEO_ID" title="Together Again Excerpt" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/yEjIbHmTmGQ" title="Together Again Excerpt" allowfullscreen></iframe>
       </div>
       <div class="media-item">
-        <iframe src="https://www.youtube.com/embed/INSERT_VIDEO_ID_2" title="Concert Highlight Clip" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/R9D7VY7AEU4" title="Together Again Excerpt" allowfullscreen></iframe>
       </div>
     </div>
   </section>
@@ -154,7 +145,7 @@
     <p>&copy; 2025 Ex Corde. All rights reserved.</p>
     <p>
       <a href="https://marcocatella.com" target="_blank">Marco Catella</a> |
-      <a href="https://joshuadeloizier.com" target="_blank">Joshua DeLoizier</a> |
+      <a href="https://joshuadelozier.com" target="_blank">Joshua DeLozier</a> |
       <a href="https://yuvalmedina.com" target="_blank">Yuval Medina</a>
     </p>
     <p>
@@ -181,6 +172,27 @@
   
         window.location.href = mailtoLink;
       });
+    </script>
+    <script>
+    function setHamburgerColor() {
+      const heroSection = document.querySelector('.hero');
+      const hamburger = document.querySelector('.hamburger');
+    
+      if (!heroSection || !hamburger) return;
+    
+      const heroBottom = heroSection.getBoundingClientRect().bottom;
+    
+      if (heroBottom > 80) {
+        hamburger.classList.remove('light');
+        hamburger.classList.add('dark');
+      } else {
+        hamburger.classList.remove('dark');
+        hamburger.classList.add('light');
+      }
+    }
+    
+    window.addEventListener('scroll', setHamburgerColor);
+    window.addEventListener('load', setHamburgerColor);
     </script>
 </body>
 </html>

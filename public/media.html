@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Media | Ex Corde</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/media.css" />
+  <link rel="stylesheet" href="/css/sidebar.css" />
+</head>
+<body>
+  <!-- Hamburger icon -->
+  <div id="hamburger" class="hamburger light">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <!-- Sidebar menu -->
+  <div id="sidebar-overlay" class="sidebar-overlay"></div>
+  <nav id="sidebar" class="sidebar">
+    <ul class="sidebar-primary">
+      <li><a href="/">Home</a></li>
+      <li><a href="/performances/index.html">Performances</a></li>
+      <li><a href="/media.html">Media</a></li>
+      <li class="has-submenu">
+        <a href="#" onclick="toggleSubmenu(event)">Composers ▾</a>
+        <ul class="submenu">
+          <li><a href="/composers/marco-catella.html">Marco Catella</a></li>
+          <li><a href="/composers/joshua-delozier.html">Joshua DeLozier</a></li>
+          <li><a href="/composers/yuval-medina.html">Yuval Medina</a></li>
+        </ul>
+      </li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+    <hr class="sidebar-divider" />
+    <ul class="sidebar-secondary">
+      <li><a href="/donate.html">Donate</a></li>
+    </ul>
+  </nav>
+  <div id="sidebar-backdrop"></div>
+
+  <header>
+    <h1>Media</h1>
+  </header>
+
+  <div class="hero-video fade-in delay-1">
+    <iframe src="https://www.youtube.com/embed/dYjIYc4saeo?autoplay=1&mute=2&loop=1&playlist=dYjIYc4saeo" title="Featured Video" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+  </div>
+  <section class="section">
+    <p class="caption"><em>Together Again</em> (2024) by Yuval Medina, New York City, December 2024</p>
+
+    <h2>Video Highlights</h2>
+    <div class="video-gallery fade-in delay-2">
+      <div>
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/yEjIbHmTmGQ" title="Performance Highlight" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <p class="caption"><em>Sonnet on the Sea</em> (2024) by Marco Catella, MSM, September 2024</p>
+      </div>
+      <div>
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/R9D7VY7AEU4" title="Performance Highlight" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <p class="caption"><em>Autumnal Harmony</em> (2025) by Joshua DeLozier, MSM, April 2025</p>
+      </div>
+    </div>
+
+    <h2>Press & Praise</h2>
+    <p class="press-quote fade-in delay-3">“As our journey begins, this space awaits your words.”</p>
+
+    <div class="social-follow fade-in delay-4">
+      <h2>Follow Us</h2>
+      <p>Behind-the-scenes and concert updates: <a href="https://instagram.com/excorde.nyc" target="_blank">@excorde.nyc</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Ex Corde. All rights reserved.</p>
+    <p>
+      <a href="https://marcocatella.com" target="_blank">Marco Catella</a> |
+      <a href="https://joshuadelozier.com" target="_blank">Joshua DeLozier</a> |
+      <a href="https://yuvalmedina.com" target="_blank">Yuval Medina</a>
+    </p>
+    <p>
+      <a href="mailto:contact@excorde.nyc">contact@excorde.nyc</a>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/excorde.nyc" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </p>
+  </footer>
+
+  <script src="/js/sidebar.js"></script>
+</body>
+</html>

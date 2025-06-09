@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Performances | Ex Corde</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/performances.css" />
+  <link rel="stylesheet" href="/css/sidebar.css" />
+</head>
+<body>
+  <!-- Hamburger icon -->
+  <div id="hamburger" class="hamburger light">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <!-- Sidebar menu -->
+  <div id="sidebar-overlay" class="sidebar-overlay"></div>
+  <nav id="sidebar" class="sidebar">
+    <ul class="sidebar-primary">
+      <li><a href="/">Home</a></li>
+      <li><a href="/performances/index.html">Performances</a></li>
+      <li><a href="/media.html">Media</a></li>
+      <li class="has-submenu">
+        <a href="#" onclick="toggleSubmenu(event)">Composers ▾</a>
+        <ul class="submenu">
+          <li><a href="/composers/marco-catella.html">Marco Catella</a></li>
+          <li><a href="/composers/joshua-delozier.html">Joshua DeLozier</a></li>
+          <li><a href="/composers/yuval-medina.html">Yuval Medina</a></li>
+        </ul>
+      </li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+    <hr class="sidebar-divider" />
+    <ul class="sidebar-secondary">
+      <li><a href="/donate.html">Donate</a></li>
+    </ul>
+  </nav>
+  <div id="sidebar-backdrop"></div>
+
+  <header>
+    <h1>Performances</h1>
+  </header>
+  <div class="intro">
+    <p>Every Ex Corde performance is a conversation — between past and present, tradition and innovation, legacy and imagination. This is where our curations come to life.</p>
+  </div>
+
+  <h2 class="section-title">Upcoming Performances</h2>
+  <section class="concert-list" id="upcoming-performances">
+    <p class="placeholder" id="upcoming-placeholder" style="display: none;">More performances coming soon.</p>
+  </section>
+
+  <h2 class="section-title">Past Performances</h2>
+  <section class="concert-list" id="past-performances">
+    <p class="placeholder" id="past-placeholder" style="display: none;">Past performances will be archived here.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Ex Corde. All rights reserved.</p>
+    <p>
+      <a href="https://marcocatella.com" target="_blank">Marco Catella</a> |
+      <a href="https://joshuadelozier.com" target="_blank">Joshua DeLozier</a> |
+      <a href="https://yuvalmedina.com" target="_blank">Yuval Medina</a>
+    </p>
+    <p>
+      <a href="mailto:contact@excorde.nyc">contact@excorde.nyc</a>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/excorde.nyc" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </p>
+  </footer>
+
+  <script src="/js/sidebar.js"></script>
+  <script>
+    fetch('/performances/performances.json')
+      .then(response => response.json())
+      .then(data => {
+        const upcomingContainer = document.getElementById('upcoming-performances');
+        const pastContainer = document.getElementById('past-performances');
+        const upcomingPlaceholder = document.getElementById('upcoming-placeholder');
+        const pastPlaceholder = document.getElementById('past-placeholder');
+
+        let hasUpcoming = false;
+        let hasPast = false;
+
+        data.forEach(performance => {
+          const card = document.createElement('article');
+          card.className = 'concert-card';
+
+          card.innerHTML = `
+            <h3>${performance.title}</h3>
+            <p class="concert-meta">${performance.date} · ${performance.time} · ${performance.venue}</p>
+            <p class="concert-description">${performance.description}</p>
+          `;
+
+          if (performance.status === 'upcoming') {
+            upcomingContainer.appendChild(card);
+            hasUpcoming = true;
+          } else {
+            pastContainer.appendChild(card);
+            hasPast = true;
+          }
+        });
+
+        if (!hasUpcoming) upcomingPlaceholder.style.display = 'block';
+        if (!hasPast) pastPlaceholder.style.display = 'block';
+      });
+  </script>
+</body>
+</html>

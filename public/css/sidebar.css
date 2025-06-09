@@ -14,11 +14,22 @@
     position: absolute;
     height: 4px;
     width: 100%;
-    background-color: white;
     border-radius: 2px;
     transition: transform 0.3s ease, opacity 0.3s ease;
     left: 0;
     transform-origin: center;
+  }
+
+  .hamburger.light span {
+    background-color: black;
+  }
+  
+  .hamburger.dark span {
+    background-color: white;
+  }
+
+  .hamburger span {
+    transition: background-color 0.3s ease;
   }
   
   /* Stack the bars */
@@ -184,3 +195,22 @@
     display: block;
   }
   
+  .has-submenu > .submenu {
+    display: none;
+    list-style: none;
+    padding-left: 15px;
+    padding-top: 20px;
+  }
+
+  .has-submenu.expanded > .submenu {
+    display: block;
+  }
+
+  .submenu li a {
+    font-size: 0.95em;
+    color: #ddd;
+  }
+
+  .submenu li a:hover {
+    color: #c56244;
+  }

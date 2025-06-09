@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support Ex Corde</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/donate.css">
+  <link rel="stylesheet" href="/css/sidebar.css">
+</head>
+<body>
+  <!-- Hamburger icon -->
+  <div id="hamburger" class="hamburger light">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <!-- Sidebar menu -->
+  <div id="sidebar-overlay" class="sidebar-overlay"></div>
+  <nav id="sidebar" class="sidebar">
+    <ul class="sidebar-primary">
+      <li><a href="/">Home</a></li>
+      <li><a href="/performances/index.html">Performances</a></li>
+      <li><a href="/media.html">Media</a></li>
+      <li class="has-submenu">
+        <a href="#" onclick="toggleSubmenu(event)">Composers ▾</a>
+        <ul class="submenu">
+          <li><a href="/composers/marco-catella.html">Marco Catella</a></li>
+          <li><a href="/composers/joshua-delozier.html">Joshua DeLozier</a></li>
+          <li><a href="/composers/yuval-medina.html">Yuval Medina</a></li>
+        </ul>
+      </li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+    <hr class="sidebar-divider" />
+    <ul class="sidebar-secondary">
+      <li><a href="/donate.html">Donate</a></li>
+    </ul>
+  </nav>
+  <div id="sidebar-backdrop"></div>
+
+  <div class="donate-container fade-in delay-1">
+    <h1>Support Ex Corde</h1>
+    <p class="intro">
+      Your donation helps us bring timeless music and bold new voices to life. As a composer-led nonprofit, every contribution directly supports our concerts, commissions, and community outreach.
+    </p>
+
+    <div class="impact">
+      <h2>Your Gift in Action</h2>
+      <ul>
+        <li><strong>$25</strong> helps cover a musician’s rehearsal session — keeping the music alive behind the scenes.</li>
+        <li><strong>$100</strong> helps bring one chamber piece to life on our concert stage.</li>
+        <li><strong>$250</strong> supports the creation of an original composition by one of our featured composers.</li>
+      </ul>
+    </div>
+
+    <div class="donate-button">
+      <!-- Replace with your actual hosted PayPal donation link or button form -->
+      <form action="https://www.paypal.com/donate" method="post" target="_blank">
+        <input type="hidden" name="hosted_button_id" value="YOUR_BUTTON_ID_HERE" />
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" name="submit" title="Donate with PayPal" alt="Donate with PayPal button" class="paypal-donate" />
+        <img alt="" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+      </form>
+    </div>
+
+    <p class="note">Ex Corde is a registered nonprofit. All donations are tax-deductible as allowed by law.</p>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Ex Corde. All rights reserved.</p>
+    <p>
+      <a href="https://marcocatella.com" target="_blank">Marco Catella</a> |
+      <a href="https://joshuadelozier.com" target="_blank">Joshua DeLozier</a> |
+      <a href="https://yuvalmedina.com" target="_blank">Yuval Medina</a>
+    </p>
+    <p>
+      <a href="mailto:contact@excorde.nyc">contact@excorde.nyc</a>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/excorde.nyc" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </p>
+  </footer>
+
+  <script src="/js/sidebar.js"></script>
+</body>
+</html>

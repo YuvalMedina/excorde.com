@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yuval Medina | Ex Corde</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/composer-page.css" />
+  <link rel="stylesheet" href="/css/sidebar.css" />
+</head>
+<body>
+  <!-- Hamburger icon -->
+  <div id="hamburger" class="hamburger light">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <!-- Sidebar menu -->
+  <div id="sidebar-overlay" class="sidebar-overlay"></div>
+  <nav id="sidebar" class="sidebar">
+    <ul class="sidebar-primary">
+      <li><a href="/">Home</a></li>
+      <li><a href="/performances/index.html">Performances</a></li>
+      <li><a href="/media.html">Media</a></li>
+      <li class="has-submenu">
+        <a href="#" onclick="toggleSubmenu(event)">Composers ▾</a>
+        <ul class="submenu">
+          <li><a href="/composers/marco-catella.html">Marco Catella</a></li>
+          <li><a href="/composers/joshua-delozier.html">Joshua DeLozier</a></li>
+          <li><a href="/composers/yuval-medina.html">Yuval Medina</a></li>
+        </ul>
+      </li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+    <hr class="sidebar-divider" />
+    <ul class="sidebar-secondary">
+      <li><a href="/donate.html">Donate</a></li>
+    </ul>
+  </nav>
+  <div id="sidebar-backdrop"></div>
+
+  <div class="profile-container fade-in delay-1">
+    <div class="composer-top">
+      <h1 class="composer-name">Joshua DeLozier</h1>
+      <div class="composer-image">
+        <img src="/images/joshua_delozier.jpg" alt="Joshua DeLozier headshot">
+      </div>
+    </div>
+    <div class="composer-bio">
+      <p>The music of Joshua C. DeLozier (b. 1998) seeks an integration of form and content to create richly varied interrelationships between ideas at different scales of time. DeLozier’s works have been heard at the Lake George Music Festival, at June in Buffalo, and on WGTE Public Media’s radio program “Morning Classics.” His works have been recognized by Bowling Green State University’s “Competitions in Music Performance” (Composition Division Finalist, 2022 and 2023) and by the ASCAP Foundation Morton Gould Young Composer Awards (Semi-Finalist, 2024). An active pianist, DeLozier’s repertoire spans from J.S. Bach to the music of our own time, such as compositions by Charles Wuorinen and Michael Hersch. He received his BM from Baylor University (summa cum laude), his MM from Bowling Green State University, and is currently pursuing a DMA at the Manhattan School of Music.</p>
+    </div>
+    <div class="composer-media">
+      <h2>Featured Work</h2>
+      <div class="video-embed">
+        <iframe src="https://www.youtube.com/embed/R9D7VY7AEU4" title="Joshua DeLozier Work" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Ex Corde. All rights reserved.</p>
+    <p>
+      <a href="https://marcocatella.com" target="_blank">Marco Catella</a> |
+      <a href="https://joshuadelozier.com" target="_blank">Joshua DeLozier</a> |
+      <a href="https://yuvalmedina.com" target="_blank">Yuval Medina</a>
+    </p>
+    <p>
+      <a href="mailto:contact@excorde.nyc">contact@excorde.nyc</a>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/excorde.nyc" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </p>
+  </footer>
+
+  <script src="/js/sidebar.js"></script>
+</body>
+</html>

@@ -57,7 +57,7 @@ header.hero video {
   height: 100%;
   object-fit: cover;
   z-index: 0;
-  filter: grayscale(80%) brightness(0.4);
+  filter: grayscale(30%) brightness(1.0) contrast(120%);
 }
 
 .hero-overlay {
@@ -104,6 +104,16 @@ section p {
   color: var(--text-muted);
 }
 
+.about-link .about-section {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  border-radius: 6px;
+}
+
+.about-link:hover .about-section {
+  transform: scale(1.015);
+  background-color: #f3ece4; /* very subtle parchment tint */
+}
+
 .concert-card {
   background-color: white;
   border: 1px solid #ddd;
@@ -144,6 +154,13 @@ section p {
 .concert-card .program {
   font-style: italic;
   color: var(--text-dark);
+}
+
+.placeholder {
+  text-align: center;
+  font-style: italic;
+  color: #888;
+  margin-top: 2rem;
 }
 
 .composer-section {
@@ -312,4 +329,18 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+.social-icons {
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  margin: 0 0.5rem;
+  color: #c8a96a;
+  font-size: 1.25rem;
+}
+
+.social-icons a:hover {
+  color: #ffffff;
 }
