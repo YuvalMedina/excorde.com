@@ -10,6 +10,24 @@
   <link rel="stylesheet" href="/css/sidebar.css">
 </head>
 <body>
+  <!-- <script>
+    const correctPassword = "fromtheheart"; // Change this
+    const isAuthenticated = false;
+  
+    if (!isAuthenticated) {
+      const attempt = prompt("Enter password to access the site:");
+      if (attempt === correctPassword) {
+        sessionStorage.setItem("authenticated", "true");
+        document.body.style.display = "block";
+      } else {
+        document.write("<h2 style='text-align:center;margin-top:20%'>Access Denied</h2>");
+        throw new Error("Access denied");
+      }
+    } else {
+      document.body.style.display = "block";
+    }
+  </script>
+  <div id="protected" style="display: none;"> -->
   <!-- Hamburger icon -->
   <div id="hamburger" class="hamburger">
     <span></span>
@@ -144,7 +162,7 @@
   <footer>
     <p>&copy; 2025 Ex Corde. All rights reserved.</p>
     <p>
-      <a href="https://marcocatella.com" target="_blank">Marco Catella</a> |
+      <a href="/composers/marco-catella.html">Marco Catella</a> |
       <a href="https://joshuadelozier.com" target="_blank">Joshua DeLozier</a> |
       <a href="https://yuvalmedina.com" target="_blank">Yuval Medina</a>
     </p>
@@ -157,6 +175,7 @@
       </div>
     </p>
   </footer>
+  <!-- </div> -->
 
   <script src="/js/sidebar.js"></script>
   <script>
@@ -194,5 +213,15 @@
     window.addEventListener('scroll', setHamburgerColor);
     window.addEventListener('load', setHamburgerColor);
     </script>
+    <!--
+    <script>
+      // Reveal content after successful password entry
+      if (sessionStorage.getItem("authenticated") === "true") {
+        const protectedDiv = document.getElementById("protected");
+        if (protectedDiv) {
+          protectedDiv.style.display = "block";
+        }
+      }
+    </script> -->
 </body>
 </html>
