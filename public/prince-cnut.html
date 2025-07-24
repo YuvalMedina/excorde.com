@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Support Ex Corde</title>
+  <title>Support Ex Corde’s Production of Prince Cnut</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/images/icon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/icon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/icon/favicon-16x16.png">
@@ -47,23 +47,50 @@
   <div id="sidebar-backdrop"></div>
 
   <div class="donate-container fade-in delay-1">
-    <h1>Support Ex Corde</h1>
+    <h1>Support Ex Corde’s Production of <em>Prince Cnut</em></h1>
     <p class="intro">
-      Your donation helps us bring timeless music and bold new voices to life. As a composer-led nonprofit, every contribution directly supports our concerts, commissions, and community outreach.
+      Prince Cnut is a two-act chamber opera by composer Marco Catella and librettist Juan Batalla—a historical drama with mythic weight, brought to life through music that conveys that weight. Produced in collaboration with the NYC Orchestra Project, it requires 13 singers, 15 instrumentalists, a choir, a team of directors, designers, and technicians, a week-long theater rental, multiple rehearsal spaces, costume and set design, and professional recording and filming.
+      <br><br>
+      Your support makes this possible.
     </p>
+
+    <div class="donate-button-top">
+        <form action="https://www.paypal.com/donate" method="post" target="_blank">
+          <input type="hidden" name="hosted_button_id" value="PXRLQD9SFZ6VE" />
+          <input type="image" src="/images/paypal_donate_button.png" 
+                 name="submit" title="Donate with PayPal" 
+                 alt="Donate with PayPal button" class="paypal-donate" />
+        </form>
+    </div>
+
+    <p class="note-top">Ex Corde is a registered nonprofit. All donations are tax-deductible as allowed by law.</p>
 
     <div class="impact">
       <h2>Your Gift in Action</h2>
-      <ul>
-        <li><strong>$25</strong> helps cover a musician’s rehearsal session — keeping the music alive behind the scenes.</li>
-        <li><strong>$100</strong> helps bring one chamber piece to life on our concert stage.</li>
-        <li><strong>$250</strong> supports the creation of an original composition by one of our featured composers.</li>
-      </ul>
+      <canvas id="pdf-canvas" style="width:100%; border-radius:8px;"></canvas>
+
+      <h3>Act 1 Scene 1 - Part 1</h3>
+      <audio controls>
+        <source src="/files/prince_cnut_act_1_scene_1_-_1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+
+      <h3>Act 1 Scene 1 - Part 2</h3>
+      <audio controls>
+        <source src="/files/prince_cnut_act_1_scene_1_-_2.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+
+      <h3>Act 2 Transformation Music</h3>
+      <audio controls>
+        <source src="/files/prince_cnut_act_2_transformation_music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
     </div>
 
     <div class="donate-button">
       <form action="https://www.paypal.com/donate" method="post" target="_blank">
-        <input type="hidden" name="hosted_button_id" value="MVVV93J8LKAQN" />
+        <input type="hidden" name="hosted_button_id" value="PXRLQD9SFZ6VE" />
         <input type="image" src="/images/paypal_donate_button.png" name="submit" title="Donate with PayPal" alt="Donate with PayPal button" class="paypal-donate" />
       </form>
     </div>
@@ -90,5 +117,24 @@
   </footer>
 
   <script src="/js/sidebar.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.9.179/pdf.min.js"></script>
+  <script>
+    const pdfUrl = '/files/prince_cnut.pdf';
+    const pdfCanvas = document.getElementById('pdf-canvas');
+    const ctx = pdfCanvas.getContext('2d');
+  
+    pdfjsLib.getDocument(pdfUrl).promise.then(pdfDoc => {
+      pdfDoc.getPage(1).then(page => {
+        const viewport = page.getViewport({ scale: 1.5 });
+        pdfCanvas.height = viewport.height;
+        pdfCanvas.width = viewport.width;
+  
+        page.render({
+          canvasContext: ctx,
+          viewport: viewport
+        });
+      });
+    });
+  </script>  
 </body>
 </html>

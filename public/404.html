@@ -3,16 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Marco Catella | Ex Corde</title>
+  <title>Page Not Found | Ex Corde</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/images/icon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/icon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/icon/favicon-16x16.png">
   <link rel="manifest" href="/images/icon/site.webmanifest">
   <link rel="shortcut icon" href="/images/icon/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="/css/main.css" />
-  <link rel="stylesheet" href="/css/composer-page.css" />
-  <link rel="stylesheet" href="/css/sidebar.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/sidebar.css">
+  <style>
+    .error-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .error-container h1 {
+      font-family: 'Inter', sans-serif;
+      font-size: 4rem;
+      font-weight: 700;
+      color: var(--oxblood);
+      margin-bottom: 1rem;
+    }
+
+    .error-container p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      max-width: 600px;
+    }
+
+    .error-container a.button {
+      display: inline-block;
+      padding: 0.7rem 1.5rem;
+      background-color: var(--oxblood);
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    .error-container a.button:hover {
+      background-color: #481c1b;
+    }
+  </style>
 </head>
 <body>
   <!-- Hamburger icon -->
@@ -46,23 +86,10 @@
   </nav>
   <div id="sidebar-backdrop"></div>
 
-  <div class="profile-container fade-in delay-1">
-    <div class="composer-top">
-      <h1 class="composer-name">Marco Catella</h1>
-      <div class="composer-image">
-        <img src="/images/marco_catella.jpg" alt="Marco Catella headshot">
-      </div>
-    </div>
-    <div class="composer-bio">
-      <p>Marco Catella is a 22-year-old composer from Buenos Aires, Argentina. With his music, he seeks to evoke universal human emotions, and explore drama in the broadest sense, through a style deeply rooted in the Western musical tradition while striving for relevance in the contemporary world.<br>
-        Marco has composed chamber music, vocal works, opera scenes, and a two-act chamber opera. He began his studies in composition and theory with Javier Velardez in Buenos Aires, and for the past three years has studied with Dr. J. Mark Stambaugh at Manhattan School of Music.</p>
-    </div>
-    <div class="composer-media">
-      <h2>Featured Work</h2>
-      <div class="video-embed">
-        <iframe src="https://www.youtube.com/embed/yEjIbHmTmGQ" title="Marco Catella Work" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </div>
+  <div class="error-container fade-in delay-1">
+    <h1>404</h1>
+    <p>The page you're looking for isn't here. It may have been moved or deleted.</p>
+    <a class="button" href="/">Back to Home</a>
   </div>
 
   <footer>

@@ -55,16 +55,47 @@ body {
     left: 0;
     color: #5e2b2a;
   }
+  .impact audio {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .impact h3 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  #pdf-canvas {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.5rem;
+  }  
   .donate-button {
     margin: 2rem 0;
+  }
+  .donate-button-top {
+    margin: 1.5rem 0 0.5rem 0;  /* space between intro and note */
+    text-align: center;       /* center the button */
   }
   .paypal-donate {
     border: none;
     width: 100%;
-    max-width: 300px;
+    max-width: 350px;
+  }
+  .paypal-donate {
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-origin: center center; /* Scale from center */
+  }
+  .paypal-donate:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
   }
   .note {
     font-size: 0.9rem;
     color: #666;
     margin-top: 1.5rem;
+  }
+  .note-top {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1.5rem;
   }
