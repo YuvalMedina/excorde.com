@@ -99,3 +99,38 @@ body {
     color: #666;
     margin-bottom: 1.5rem;
   }
+
+/* Donation CTA (optimized for #f8f4ec background) */
+.donate-cta {
+  display: inline-block;
+  padding: 0.9rem 1.4rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  text-decoration: none;
+  line-height: 1;
+  background-color: #5c3d2e; /* espresso brown */
+  color: #ffffff;
+  border: 1px solid #4a2f23;
+  box-shadow: 0 3px 6px rgba(92, 61, 46, 0.25);
+  transition: transform 120ms ease, box-shadow 120ms ease, background-color 120ms ease;
+}
+
+.donate-cta:hover {
+  background-color: #7a5440; /* lighter brown */
+  transform: translateY(-1px);
+  box-shadow: 0 6px 12px rgba(92, 61, 46, 0.3);
+}
+
+.donate-cta:active {
+  background-color: #4a2f23;
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(92, 61, 46, 0.25);
+}
+
+.donate-button-top,
+.donate-button {
+  text-align: center;
+}
+
+.donate-button-top { margin: 1.25rem 0 0.5rem; }
+.donate-button      { margin: 1.5rem 0; }

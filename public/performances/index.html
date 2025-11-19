@@ -91,20 +91,113 @@
         const pastContainer = document.getElementById('past-performances');
         const upcomingPlaceholder = document.getElementById('upcoming-placeholder');
         const pastPlaceholder = document.getElementById('past-placeholder');
-
+  
         let hasUpcoming = false;
         let hasPast = false;
-
+  
         data.forEach(performance => {
           const card = document.createElement('article');
           card.className = 'concert-card';
+  
+          //
+          // ---------------------------
+          // 1. TITLE + META
+          // ---------------------------
+          //
+          const imageHTML = performance.image
+            ? `
+                <div class="concert-image-wrapper">
+                  <img src="${performance.image}"
+                      alt="${performance.imageAlt || performance.title}">
+                </div>
+              `
+            : "";
 
           card.innerHTML = `
+            ${imageHTML}
             <h3>${performance.title}</h3>
-            <p class="concert-meta">${performance.date} · ${performance.time} · ${performance.venue}</p>
-            <p class="concert-description">${performance.description}</p>
+            <p class="concert-meta">
+              ${performance.date} · ${performance.time} · ${performance.venue}
+            </p>
+            <div class="concert-description"></div>
           `;
 
+  
+          const descriptionEl = card.querySelector('.concert-description');
+  
+          //
+          // ---------------------------
+          // 2. FULL DESCRIPTION PROCESSING
+          // ---------------------------
+          //
+          const paragraphs = performance.description
+            ? performance.description.split(/\n\s*\n/).map(p => p.trim()).filter(Boolean)
+            : [];
+  
+          const fullHTML = paragraphs.map(p => `<p>${p}</p>`).join("");
+  
+          descriptionEl.innerHTML = fullHTML;
+  
+          //
+          // ---------------------------
+          // 3. COLLAPSE LOGIC (if > 2 paragraphs)
+          // ---------------------------
+          //
+          if (paragraphs.length > 2) {
+            // Initial collapsed state
+            descriptionEl.classList.add("collapsed");
+
+            // Mark this card as having a collapsed description (for the gradient)
+            card.classList.add("has-collapsed-description"); 
+  
+            // Create wrapper for fade-out + button
+            const wrapper = document.createElement("div");
+            wrapper.className = "show-more-wrapper";
+  
+            // Create elegant button
+            const btn = document.createElement("div");
+            btn.className = "show-more-toggle";
+            btn.textContent = "Show more";
+  
+            wrapper.appendChild(btn);
+            card.appendChild(wrapper);
+  
+            // Click handler (capturing click inside fade area)
+            wrapper.addEventListener("click", (event) => {
+              event.stopPropagation(); // prevent card → ticket click
+
+              const expanded = descriptionEl.classList.toggle("expanded");
+
+              // Sync expanded state on the card (for the gradient)
+              card.classList.toggle("expanded", expanded);
+
+              if (expanded) {
+                btn.textContent = "Show less";
+                card.classList.remove("has-collapsed-description");
+              } else {
+                btn.textContent = "Show more";
+                card.classList.add("has-collapsed-description");
+              }
+            });
+          }
+  
+          //
+          // ---------------------------
+          // 4. CARD → TICKET LINK
+          // ---------------------------
+          //
+          if (performance.ticketLink) {
+            card.style.cursor = 'pointer';
+            card.addEventListener('click', () => {
+              window.open(performance.ticketLink, '_blank', 'noopener,noreferrer');
+            });
+          }
+  
+          //
+          // ---------------------------
+          // 5. APPEND CARD
+          // ---------------------------
+          //
           if (performance.status === 'upcoming') {
             upcomingContainer.appendChild(card);
             hasUpcoming = true;
@@ -113,10 +206,10 @@
             hasPast = true;
           }
         });
-
+  
         if (!hasUpcoming) upcomingPlaceholder.style.display = 'block';
         if (!hasPast) pastPlaceholder.style.display = 'block';
       });
-  </script>
+  </script>  
 </body>
 </html>

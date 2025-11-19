@@ -1,1 +1,13 @@
-[]
+[
+    {
+      "title": "From The Beloved Permessus",
+      "date": "December 13, 2025",
+      "time": "7:30 PM",
+      "venue": "St Jean Baptiste Church, 184 E 76th St, New York, NY 10021",
+      "image": "/images/performances/from_the_beloved_permessus.png",
+      "imageAlt": "From The Beloved Permessus – Ex Corde's inaugural concert at St Jean Baptiste Church",
+      "description": "Our inaugural concert's theme is the human <strong>voice</strong>.\n\nIn many ways, the voice has been the unifying aspect of composition through history — whether it be instrumental or vocal music, composers of the best kinds of music conceived of the instruments as extensions of the human body. And, of course, at the origin of this feeling is the human voice.\n\nOur program will walk the listener from the most embodied (and vocal) type of music to the most disembodied and heavenly music: <strong>Messiaen’s</strong> <em>Apparition de l'église éternelle</em>.\n\nEx Corde is a 501(c)3 nonprofit dedicated to curating concert experiences that speak across centuries. We bring the timeless works of Bach, Mahler, Britten, and more in direct conversation with the vibrant voices of today – <strong>emerging composers</strong> from the New York City area and beyond.",
+      "status": "upcoming",
+      "ticketLink": "https://www.zeffy.com/en-US/ticketing/inaugural-concert"
+    }
+  ]

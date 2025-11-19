@@ -37,6 +37,7 @@ body {
     padding: 0 2rem 4rem;
   }
   .concert-card {
+    position: relative;
     border: 1px solid #ddd;
     padding: 1.5rem;
     border-radius: 8px;
@@ -60,9 +61,102 @@ body {
     font-size: 1rem;
     line-height: 1.6;
   }
+  .concert-description p {
+    margin: 0 0 0.85rem;
+  }
+  .concert-description p:last-child {
+    margin-bottom: 0;
+  }
   .placeholder {
     text-align: center;
     font-style: italic;
     color: #888;
     margin-top: 2rem;
   }
+  /* Description container */
+.concert-description {
+  position: relative;
+  max-height: 200px;                /* collapsed height (adjustable) */
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+  padding-bottom: 20px;
+}
+
+/* Expanded state: reveal full description */
+.concert-description.expanded {
+  max-height: none;
+}
+
+/* Clickable fade + button wrapper */
+.show-more-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 55px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 8px;
+  background: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* Show more button (elegant, not link-like) */
+.show-more-toggle {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 4px 12px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  border: 1px solid #ddd;
+  color: var(--navy);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  user-select: none;
+}
+
+.show-more-toggle:hover {
+  background: white;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+}
+
+/* Grey gradient fade on the entire card bottom */
+.concert-card.has-collapsed-description::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 55px;
+  border-radius: 0 0 8px 8px; /* match card rounding */
+  background: linear-gradient(
+    to bottom,
+    rgba(248, 244, 236, 0) 0%,   /* same parchment gradient you liked */
+    rgba(248, 244, 236, 1) 100%
+  );
+  pointer-events: none;
+}
+
+/* When expanded, hide the gradient */
+.concert-card.expanded::after {
+  display: none;
+}
+
+/* Image at the top of each concert card */
+.concert-image-wrapper {
+  width: 70%;
+  margin: 0.5rem auto 1rem;  /* centered */
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 16/9;       /* keeps proportions clean */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.concert-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+

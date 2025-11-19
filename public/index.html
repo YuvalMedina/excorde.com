@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/performances.css">
   <link rel="stylesheet" href="/css/sidebar.css">
 </head>
 <body>
@@ -229,5 +230,129 @@
         }
       }
     </script> -->
+    <script>
+      function createPerformanceCard(performance) {
+        const card = document.createElement('article');
+        card.className = 'concert-card';
+    
+        function formatText(text) {
+          if (!text) return '';
+          return text.replace(/\*(.+?)\*/g, '<em>$1</em>');
+        }
+    
+        const paragraphs = performance.description
+          ? performance.description
+              .split(/\n\s*\n/)
+              .map(p => p.trim())
+              .filter(Boolean)
+          : [];
+    
+        const fullHTML = paragraphs
+          .map(p => `<p>${formatText(p)}</p>`)
+          .join('');
+    
+        const shortHTML = paragraphs.length > 2
+          ? paragraphs
+              .slice(0, 2)
+              .map(p => `<p>${formatText(p)}</p>`)
+              .join('')
+          : fullHTML;
+    
+        const needsToggle = fullHTML !== shortHTML;
+    
+        const imageHTML = performance.image
+          ? `
+              <div class="concert-image-wrapper">
+                <img src="${performance.image}"
+                    alt="${performance.imageAlt || performance.title}">
+              </div>
+            `
+          : "";
+
+        card.innerHTML = `
+            ${imageHTML}
+            <h3>${performance.title}</h3>
+            <p class="concert-meta">
+              ${performance.date} · ${performance.time} · ${performance.venue}
+            </p>
+            <div class="concert-description">
+              ${needsToggle ? shortHTML : fullHTML}
+            </div>
+          `;
+
+    
+        const descriptionEl = card.querySelector('.concert-description');
+    
+        if (performance.ticketLink) {
+          card.style.cursor = 'pointer';
+          card.addEventListener('click', () => {
+            window.open(performance.ticketLink, '_blank', 'noopener,noreferrer');
+          });
+        }
+    
+        if (needsToggle) {
+          card.classList.add('has-collapsed-description');
+    
+          const showMoreWrapper = document.createElement('div');
+          showMoreWrapper.className = 'show-more-wrapper';
+    
+          const toggleBtn = document.createElement('button');
+          toggleBtn.type = 'button';
+          toggleBtn.className = 'show-more-toggle';
+          toggleBtn.textContent = 'Show more';
+    
+          showMoreWrapper.appendChild(toggleBtn);
+          card.appendChild(showMoreWrapper);
+    
+          showMoreWrapper.addEventListener('click', (event) => {
+            event.stopPropagation();
+    
+            const isExpanded = card.classList.toggle('expanded');
+            descriptionEl.classList.toggle('expanded', isExpanded);
+    
+            if (isExpanded) {
+              descriptionEl.innerHTML = fullHTML;
+              card.classList.remove('has-collapsed-description');
+              toggleBtn.textContent = 'Show less';
+            } else {
+              descriptionEl.innerHTML = shortHTML;
+              card.classList.add('has-collapsed-description');
+              toggleBtn.textContent = 'Show more';
+            }
+          });
+        }
+    
+        return card;
+      }
+    
+      fetch('/performances/performances.json')
+        .then(response => response.json())
+        .then(data => {
+          const upcomingSection = document.querySelector('.concerts');
+          const placeholder = document.getElementById('upcoming-placeholder');
+          if (!upcomingSection) return;
+    
+          const upcomingPerformances = data.filter(
+            p => p.status === 'upcoming'
+          );
+    
+          if (!upcomingPerformances.length) {
+            // leave the "More performances coming soon" text
+            return;
+          }
+    
+          if (placeholder) {
+            placeholder.style.display = 'none';
+          }
+    
+          upcomingPerformances.forEach(performance => {
+            const card = createPerformanceCard(performance);
+            upcomingSection.appendChild(card);
+          });
+        })
+        .catch(err => {
+          console.error('Error loading performances.json on homepage:', err);
+        });
+    </script>    
 </body>
 </html>
