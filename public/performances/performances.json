@@ -7,7 +7,18 @@
       "image": "/images/performances/from_the_beloved_permessus.png",
       "imageAlt": "From The Beloved Permessus – Ex Corde's inaugural concert at St Jean Baptiste Church",
       "description": "Our inaugural concert's theme is the human <strong>voice</strong>.\n\nIn many ways, the voice has been the unifying aspect of composition through history — whether it be instrumental or vocal music, composers of the best kinds of music conceived of the instruments as extensions of the human body. And, of course, at the origin of this feeling is the human voice.\n\nOur program will walk the listener from the most embodied (and vocal) type of music to the most disembodied and heavenly music: <strong>Messiaen’s</strong> <em>Apparition de l'église éternelle</em>.\n\nEx Corde is a 501(c)3 nonprofit dedicated to curating concert experiences that speak across centuries. We bring the timeless works of Bach, Mahler, Britten, and more in direct conversation with the vibrant voices of today – <strong>emerging composers</strong> from the New York City area and beyond.",
-      "status": "upcoming",
+      "status": "past",
       "ticketLink": "https://www.zeffy.com/en-US/ticketing/inaugural-concert"
+    },
+    {
+      "title": "Prince Cnut",
+      "date": "February 19 & 20, 2026",
+      "time": "7:30 PM",
+      "venue": "Theater at St. Jean, 150 E 76th St, New York, NY 10021",
+      "image": "/images/performances/prince_cnut.jpg",
+      "imageAlt": "Prince Cnut – Ex Corde's co-production of Marco Catella's two-act opera",
+      "description": "Join us for our production of Marco Catella's two-act opera,<strong><em>Prince Cnut</em></strong>. In it, the future King encounters a prophecy that promises political triumph, but also brings confusion, tragedy, and death. Bringing musical intensity to Juan Batalla's ornate, archaic libretto and thousand-year-old setting, this work has many characteristics that will stand out as uncommon in the genre of contemporary chamber opera.\n\nFeaturing the NYC Orchestra Project, this fully staged, two-evening production will take place at the intimate Theater at St. Jean and will run for approximately two and a half hours, including intermission.",
+      "status": "upcoming",
+      "ticketLink": "https://www.zeffy.com/en-US/ticketing/prince-cnut-2"
     }
   ]
