@@ -160,3 +160,22 @@ body {
   object-fit: cover;
 }
 
+/* Description container */
+.concert-description {
+  position: relative;
+  max-height: none;      /* default: don't clamp */
+  overflow: visible;
+  transition: max-height 0.35s ease;
+}
+
+/* Only clamp when JS says it's collapsible */
+.concert-description.collapsed {
+  max-height: 200px;     /* collapsed height */
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+
+/* Expanded state */
+.concert-description.expanded {
+  max-height: none;
+}
